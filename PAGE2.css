@@ -1,0 +1,232 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex; /* Make header a flexbox container */
+  justify-content: space-between; /* Distribute elements horizontally */
+  align-items: center; /* Align elements vertically */
+  margin-bottom: 5px; /* Space below the header */
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to bottom, #0066ff 0%, #00ffff 100%);
+  color: #fff;
+  /* padding: 10px; */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Make navigation a flexbox container */
+  /* Remove default horizontal spacing between list items */
+  /* margin-left: auto; Move navigation to the right side */
+  /* justify-content: flex-end; Align items to the right */
+  gap: 20px; /* Add space between links */
+}
+
+nav li {
+  /* padding-right: 50px; Add spacing between links */
+}
+
+nav a, nav button {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button {
+  background-color: #003399;
+  color: #fff;
+}
+
+nav img {
+  margin-right: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.hero button {
+  background-color: #003399;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 100%; /* Set a max-width for the container */
+  margin: auto;
+}
+
+.mySlides {
+  display: none; /* Hide all slides by default */
+  position: relative; /* Ensure the slides are positioned relative for absolute child elements */
+}
+
+.fade {
+  animation: fade 1.5s; /* Duration of fade effect */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1.0s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay-image {
+  position: absolute; /* Position the overlay image absolutely */
+  bottom: 0; /* Align to the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 100%; /* Set width of the overlay image */
+  opacity: 1; /* Set transparency level (0 = fully transparent, 1 = fully opaque) */
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* ...existing CSS styles... */
+
+.alumni-map {
+  position: relative; /* This allows absolute positioning of child elements */
+}
+
+.map-container {
+  position: relative; /* Ensure the container is positioned relative */
+  width: 800px; /* Set a specific width for the map */
+  margin: auto; /* Center the map */
+}
+
+.map-container img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.top-left {
+  position: absolute; /* Position the text box absolutely */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+  padding: 15px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  z-index: 10; /* Ensure the overlay is above the image */
+}
+
+.map-title {
+  margin: 0; /* Remove default margin */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+.map-button {
+  display: inline-block; /* Make the button behave like a block */
+  margin-top: 10px; /* Space between title and button */
+  color: white; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 15px; /* Button padding */
+  background-color: #007BFF; /* Button background color */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+.highlights-container {
+  display: flex; /* Use flexbox layout */
+  align-items: flex-start; /* Align items at the start of the container */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #848484;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  flex: 1; /* Allow the content to grow */
+}
+
+.image-container {
+  margin-left: 20px; 
+  margin-right: 150px;/* Add some space between the text and the image */
+}
+
+.highlight-image {
+  max-width: 500px; /* Set a maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px; /* Optional: rounded corners for the image */
+}
+.info-container {
+  display: flex; /* Use flexbox to arrange items side by side */
+  justify-content: space-between; /* Space between the boxes */
+  margin-bottom: 20px; /* Space below the container */
+}
+
+.announcements, .distinguished-alumni {
+  flex: 1; /* Allow both sections to grow equally */
+  margin: 0 10px; /* Add horizontal spacing between the boxes */
+  padding: 20px; /* Add padding inside the boxes */
+  border: 1px solid #848484; /* Add a border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #fff; /* White background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.announcements h3, .distinguished-alumni h3 {
+  margin-top: 0; /* Remove top margin for headings */
+}
+
+footer {
+  text-align: center; /* Center align footer text */
+  padding: 10px 0; /* Padding around footer */
+  background-color: #124ab8; /* Dark blue background */
+  color: #fff; /* White text color */
+  position: relative; /* Position relative for footer */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
